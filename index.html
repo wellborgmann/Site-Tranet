@@ -9,6 +9,7 @@
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
 	<link rel="alternate" type="application/rss+xml" title="Feed para TRANET TV &raquo;" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Feed de comentários para TRANET TV &raquo;" href="comments/feed/index.html" />
+<link id="favicon" rel="icon" type="image/png" href="logoTranet.png">
 <script>
 window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/psouzatv.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
 /*! This file is auto-generated */
@@ -1218,3 +1219,23 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
 </body>
 </html>
+
+<script>
+
+
+function mudarIcone() {
+      const novoIcone = "logoTranet.png"; // Caminho do novo ícone
+      const link = document.getElementById("favicon") || document.createElement("link");
+      link.id = "favicon";
+      link.rel = "icon";
+      link.type = "image/png";
+      link.href = novoIcone;
+
+      // Remove o favicon atual se existir
+      const head = document.head;
+      const favicons = head.querySelectorAll('link[rel="icon"]');
+      favicons.forEach(fav => head.removeChild(fav));
+
+      head.appendChild(link);
+	}
+</script>
